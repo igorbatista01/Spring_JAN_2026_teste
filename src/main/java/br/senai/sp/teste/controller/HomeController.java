@@ -17,10 +17,13 @@ public class HomeController {
 	}
 	
 	@GetMapping("/params")
-	public String homeParams (@RequestParam(name="nome") String nome, Model model) {
+	public String homeParams (@RequestParam(name="nome") String nome, @RequestParam(name="id") Long id, 
+			
+			Model model) {
 		
-		model.addAttribute("attr", nome);
+		model.addAttribute("attrNome", nome);
+		model.addAttribute("attrId", id);
 		System.out.println(nome);
-		return "home/index2";
+		return "home/index";
 	}
 }

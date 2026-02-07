@@ -19,7 +19,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
-            border-top: 5px solid #ff0000; 
+            border-top: 5px solid rgb(0, 128, 0); 
         }
         h1 { color: #333; }
         p { color: #666; }
@@ -28,12 +28,16 @@
 <body>
 
     <div class="card">
-        <h1>Index2</h1>
-        <p>Projeto: <strong>Spring_JAN_2026_teste</strong></p>
-       <p>Desenvolvido por: <span th:text="${attr}">Não foi possível carregar o nome do cabra.</span></p>
-        <hr>
-        <small>Desenvolvimento de Sistemas - SENAI 2026</small>
-    </div>
+    <h1>Index2</h1>
+    <p>Projeto: <strong>Spring_JAN_2026_teste</strong></p>
+    
+    <p>Desenvolvido por: <span th:text="${attrNome}">Nome Padrão</span></p>
+    
+    <p>ID do Usuário: <span th:text="${attrId}"></span></p>
+    
+    <hr>
+    <small>Desenvolvimento de Sistemas - SENAI 2026</small>
+</div>
 
 </body>
 </html>
